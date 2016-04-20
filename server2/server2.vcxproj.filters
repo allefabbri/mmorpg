@@ -14,12 +14,24 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
     <Filter Include="Source Files\boost">
-      <UniqueIdentifier>{cec797fc-d808-46ba-896b-253dc3e03056}</UniqueIdentifier>
+      <UniqueIdentifier>{3646b130-e27e-470e-9174-f5d890aa7de7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\client.cpp">
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="server2.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\native\src\boost_chrono.chrono.cpp">
+      <Filter>Source Files\boost</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\native\src\boost_chrono.process_cpu_clocks.cpp">
+      <Filter>Source Files\boost</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\native\src\boost_chrono.thread_clock.cpp">
+      <Filter>Source Files\boost</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\native\src\gregorian\boost_date_time.gregorian.date_generators.cpp">
       <Filter>Source Files\boost</Filter>
@@ -90,13 +102,20 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\native\src\boost_system.error_code.cpp">
       <Filter>Source Files\boost</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\src\udp_wrapper.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\native\src\boost_thread.future.cpp">
+      <Filter>Source Files\boost</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\native\src\boost_thread.tss_null.cpp">
+      <Filter>Source Files\boost</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\native\src\win32\boost_thread.win32.thread.cpp">
+      <Filter>Source Files\boost</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\native\src\win32\boost_thread.win32.tss_dll.cpp">
+      <Filter>Source Files\boost</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\native\src\win32\boost_thread.win32.tss_pe.cpp">
+      <Filter>Source Files\boost</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
